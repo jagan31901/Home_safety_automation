@@ -1,0 +1,58 @@
+{
+  "version": 1,
+  "author": "Jagan G",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-arduino-uno", "id": "uno", "top": 0.6, "left": -231, "attrs": {} },
+    {
+      "type": "wokwi-lcd1602",
+      "id": "lcd1",
+      "top": -108.8,
+      "left": 207.2,
+      "attrs": { "pins": "i2c" }
+    },
+    { "type": "wokwi-relay-module", "id": "relay1", "top": 134.6, "left": 220.8, "attrs": {} },
+    {
+      "type": "wokwi-led",
+      "id": "led1",
+      "top": -166.8,
+      "left": -226.6,
+      "attrs": { "color": "green" }
+    },
+    {
+      "type": "wokwi-ntc-temperature-sensor",
+      "id": "ntc1",
+      "top": 50.6,
+      "left": -451.8,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-buzzer",
+      "id": "bz1",
+      "top": -189.6,
+      "left": -55.8,
+      "attrs": { "volume": "0.1" }
+    },
+    { "type": "wokwi-led", "id": "led2", "top": 82.8, "left": 445.4, "attrs": { "color": "red" } }
+  ],
+  "connections": [
+    [ "uno:A0", "ntc1:OUT", "green", [ "v28.7", "h-341.8" ] ],
+    [ "uno:A4", "lcd1:SDA", "#8f4814", [ "v47.9", "h100.2", "v-278.4" ] ],
+    [ "uno:A5", "lcd1:SCL", "red", [ "v19.1", "h109.9", "v-249.6" ] ],
+    [ "bz1:2", "uno:3", "orange", [ "v0", "h38" ] ],
+    [ "uno:4", "relay1:IN", "gold", [ "v105.6", "h3.9", "v201.6" ] ],
+    [ "led1:C", "uno:2", "green", [ "v67.2", "h58" ] ],
+    [ "led1:A", "uno:GND.1", "black", [ "v0", "h76.8" ] ],
+    [ "led1:A", "bz1:1", "black", [ "v0" ] ],
+    [ "bz1:1", "lcd1:GND", "black", [ "v0" ] ],
+    [ "uno:5V", "lcd1:VCC", "red", [ "v-230.5", "h109.4", "v-19.2" ] ],
+    [ "uno:GND.2", "relay1:GND", "black", [ "v95.9", "h234.3", "v-48" ] ],
+    [ "ntc1:GND", "uno:GND.1", "black", [ "h9.6", "v-96", "h182.4" ] ],
+    [ "ntc1:VCC", "uno:5V", "red", [ "h38.4", "v57.6", "h0", "v105.6", "h192" ] ],
+    [ "uno:5V", "relay1:VCC", "red", [ "v0" ] ],
+    [ "relay1:COM", "led2:C", "violet", [ "h0" ] ],
+    [ "relay1:GND", "relay1:NO", "black", [ "h0", "v66.8", "h144" ] ],
+    [ "relay1:VCC", "led2:A", "red", [ "h-9.6", "v105.6", "h259.2", "v-134.4" ] ]
+  ],
+  "dependencies": {}
+}
