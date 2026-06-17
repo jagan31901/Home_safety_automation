@@ -37,7 +37,7 @@ This project monitors temperature using an NTC thermistor and displays the tempe
 
 🔗 **Wokwi Project Link:**
 
-[:contentReference[oaicite:0]{index=0}](https://wokwi.com/projects/467091062071083009)
+https://wokwi.com/projects/467091062071083009
 
 ## Applications
 - Temperature Monitoring
