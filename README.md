@@ -10,7 +10,6 @@ This project monitors temperature using an NTC thermistor and displays the tempe
 - LED
 - Buzzer
 - Relay Module
-- Jumper Wires
 
 ## Pin Connections
 
@@ -34,18 +33,11 @@ This project monitors temperature using an NTC thermistor and displays the tempe
 5. If temperature is below 30°C:
    - LED, buzzer, and relay remain OFF.
 
-## Output
-### Normal Condition
-```
-Temp: 25.5 C
-```
+## Wokwi Simulation
 
-### High Temperature
-```
-Temp: 32.8 C
-```
+🔗 **Wokwi Project Link:**
 
-LED, buzzer, and relay are activated.
+:contentReference[oaicite:0]{index=0}
 
 ## Applications
 - Temperature Monitoring
@@ -54,4 +46,4 @@ LED, buzzer, and relay are activated.
 - Industrial Safety Monitoring
 
 ## Author
-Jagan G
+**Jagan G**
